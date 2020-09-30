@@ -27,6 +27,7 @@ body {
 .form,
 .greetings {
   display: none;
+  color: white;
 }
 
 .showing {

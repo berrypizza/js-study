@@ -17,19 +17,20 @@ function paintTodo(text) {
 
 function handleSubmitToDo(event) {
   event.preventDefault();
+  event.stopPropagation();
   currentValue = toDoInput.value;
   paintTodo(currentValue);
   toDoInput.value = "";
 }
 
-function loadTodo() {
+function loadToDo() {
   const toDos = localStorage.getItem(TODO_LS);
   if (toDos !== null) {
   }
 }
 
 function init() {
-  loadTodo();
+  loadToDo();
   toDoForm.addEventListener("submit", handleSubmitToDo);
 }
 
